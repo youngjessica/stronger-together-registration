@@ -6,14 +6,134 @@
 <title>Registration | Stronger Together</title>
 <style>
 :root{--teal:#2F7783;--dark:#1F4F57;--cream:#F8F4EE;--sage:#EEF3F1;--gold:#D8B59A;--coral:#D88B83;--text:#16383d;--line:#D8D2CB;}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--text);font-family:Verdana,Arial,sans-serif}.page{width:100%;overflow-x:hidden;background:#fff}.wrap{width:min(1120px,calc(100% - 44px));margin:0 auto}.nav{height:62px;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(216,210,203,.75);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:bold;color:#111;text-decoration:none;display:flex;align-items:center;gap:10px;white-space:nowrap}.brand span{color:var(--teal);font-size:24px}.links{display:flex;align-items:center;gap:30px;font-size:13px}.links a{color:#111;text-decoration:none}.links a.active{font-weight:bold;color:var(--dark)}.hero{min-height:450px;background:linear-gradient(rgba(40,24,12,.42),rgba(40,24,12,.42)),url('hero.jpg') center/cover no-repeat;display:flex;align-items:center;text-align:center;color:white}.hero-inner{width:min(900px,calc(100% - 36px));margin:0 auto;padding:82px 0 76px}.hero h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(48px,8vw,78px);font-weight:400;line-height:1.05;margin:0 0 20px;text-shadow:0 4px 20px rgba(0,0,0,.32)}.mini-divider{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--gold);font-size:22px;margin:0 auto 24px}.mini-divider span{display:block;width:120px;max-width:22vw;height:1px;background:rgba(216,181,154,.85)}.hero .sub{font-size:clamp(18px,3vw,26px);letter-spacing:2.5px;text-transform:uppercase;font-weight:bold;color:var(--gold);margin-bottom:12px}.hero .series{font-size:clamp(16px,2.4vw,22px);letter-spacing:2px;text-transform:uppercase}.teal-band{background:linear-gradient(135deg,#07464c 0%,#1F4F57 55%,#2F7783 100%);color:white}.band-inner{min-height:134px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}.band-left{display:flex;align-items:center;gap:24px}.circle-icon{width:76px;height:76px;border-radius:50%;background:rgba(47,119,131,.85);display:flex;align-items:center;justify-content:center;flex:0 0 auto}.circle-icon img{width:42px;height:42px}.band-title{font-size:23px;letter-spacing:1.8px;text-transform:uppercase;font-weight:bold;margin-bottom:8px}.band-text{font-size:16px;color:#fff}.gold-btn{display:inline-block;background:linear-gradient(135deg,#D8B59A,#E6BF78);color:white;text-decoration:none;text-transform:uppercase;font-weight:bold;letter-spacing:1px;padding:20px 54px;border-radius:8px;box-shadow:0 10px 24px rgba(0,0,0,.18)}.form-section{padding:48px 0 62px;background:linear-gradient(180deg,#fff 0%,#fbf8f4 100%);text-align:center}.form-section h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(36px,5vw,52px);color:var(--dark);margin:0 0 16px}.form-section .intro{font-size:16px;line-height:1.7;margin:0 auto 28px;color:var(--text)}.form{max-width:920px;margin:34px auto 0;text-align:left}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.field{margin-bottom:26px}.field label{display:block;font-size:14px;color:var(--text);margin-bottom:9px}.field label .req{color:#C64B4B}.field input,.field select,.field textarea{width:100%;border:1px solid #D8D2CB;border-radius:6px;padding:15px 16px;font-size:14px;font-family:Verdana,Arial,sans-serif;background:white;color:#333}.field textarea{min-height:108px;resize:vertical}.full{grid-column:1 / -1}.submit-wrap{text-align:center;margin-top:18px}.submit{border:0;background:linear-gradient(135deg,#0b474d,#1F4F57);color:white;text-transform:uppercase;font-weight:bold;letter-spacing:1.3px;padding:18px 90px;border-radius:6px;font-size:15px;box-shadow:0 10px 22px rgba(0,0,0,.18);cursor:pointer;max-width:100%}.privacy{text-align:center;margin-top:22px;font-size:14px;color:var(--text)}.footer{background:linear-gradient(135deg,#06474d 0%,#1F4F57 70%,#0b383e 100%);color:white;padding:42px 0 28px}.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:46px;align-items:start}.footer h3{font-family:Georgia,'Times New Roman',serif;font-size:27px;font-weight:400;margin:12px 0}.footer .logo-heart{font-size:54px;color:var(--gold);line-height:1}.footer .foot-label{font-size:15px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);font-weight:bold;margin-bottom:18px}.footer p,.footer a{font-size:15px;line-height:1.75;color:white}.footer a{text-decoration:underline}.copyright{text-align:center;margin-top:40px;font-size:13px;color:rgba(255,255,255,.82)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--text);font-family:Verdana,Arial,sans-serif}.page{width:100%;overflow-x:hidden;background:#fff}.wrap{width:min(1120px,calc(100% - 44px));margin:0 auto}.nav{height:62px;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(216,210,203,.75);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:bold;color:#111;text-decoration:none;display:flex;align-items:center;gap:10px;white-space:nowrap}.brand span{color:var(--teal);font-size:24px}.links{display:flex;align-items:center;gap:30px;font-size:13px}.links a{color:#111;text-decoration:none}.links a.active{font-weight:bold;color:var(--dark)}.hero{min-height:450px;background:linear-gradient(rgba(40,24,12,.42),rgba(40,24,12,.42)),url('hands.jpg') center/cover no-repeat;display:flex;align-items:center;text-align:center;color:white}.hero-inner{width:min(900px,calc(100% - 36px));margin:0 auto;padding:82px 0 76px}.hero h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(48px,8vw,78px);font-weight:400;line-height:1.05;margin:0 0 20px;text-shadow:0 4px 20px rgba(0,0,0,.32)}.mini-divider{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--gold);font-size:22px;margin:0 auto 24px}.mini-divider span{display:block;width:120px;max-width:22vw;height:1px;background:rgba(216,181,154,.85)}.hero .sub{font-size:clamp(18px,3vw,26px);letter-spacing:2.5px;text-transform:uppercase;font-weight:bold;color:var(--gold);margin-bottom:12px}.hero .series{font-size:clamp(16px,2.4vw,22px);letter-spacing:2px;text-transform:uppercase}.teal-band{background:linear-gradient(135deg,#07464c 0%,#1F4F57 55%,#2F7783 100%);color:white}.band-inner{min-height:134px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}.band-left{display:flex;align-items:center;gap:24px}.circle-icon{width:76px;height:76px;border-radius:50%;background:rgba(47,119,131,.85);display:flex;align-items:center;justify-content:center;flex:0 0 auto}.circle-icon img{width:42px;height:42px}.band-title{font-size:23px;letter-spacing:1.8px;text-transform:uppercase;font-weight:bold;margin-bottom:8px}.band-text{font-size:16px;color:#fff}.gold-btn{display:inline-block;background:linear-gradient(135deg,#D8B59A,#E6BF78);color:white;text-decoration:none;text-transform:uppercase;font-weight:bold;letter-spacing:1px;padding:20px 54px;border-radius:8px;box-shadow:0 10px 24px rgba(0,0,0,.18)}.form-section{padding:48px 0 62px;background:linear-gradient(180deg,#fff 0%,#fbf8f4 100%);text-align:center}.form-section h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(36px,5vw,52px);color:var(--dark);margin:0 0 16px}.form-section .intro{font-size:16px;line-height:1.7;margin:0 auto 28px;color:var(--text)}.form{max-width:920px;margin:34px auto 0;text-align:left}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.field{margin-bottom:26px}.field label{display:block;font-size:14px;color:var(--text);margin-bottom:9px}.field label .req{color:#C64B4B}.field input,.field select,.field textarea{width:100%;border:1px solid #D8D2CB;border-radius:6px;padding:15px 16px;font-size:14px;font-family:Verdana,Arial,sans-serif;background:white;color:#333}.field textarea{min-height:108px;resize:vertical}.full{grid-column:1 / -1}.submit-wrap{text-align:center;margin-top:18px}.submit{border:0;background:linear-gradient(135deg,#0b474d,#1F4F57);color:white;text-transform:uppercase;font-weight:bold;letter-spacing:1.3px;padding:18px 90px;border-radius:6px;font-size:15px;box-shadow:0 10px 22px rgba(0,0,0,.18);cursor:pointer;max-width:100%}.privacy{text-align:center;margin-top:22px;font-size:14px;color:var(--text)}.footer{background:linear-gradient(135deg,#06474d 0%,#1F4F57 70%,#0b383e 100%);color:white;padding:42px 0 28px}.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:46px;align-items:start}.footer h3{font-family:Georgia,'Times New Roman',serif;font-size:27px;font-weight:400;margin:12px 0}.footer .logo-heart{font-size:54px;color:var(--gold);line-height:1}.footer .foot-label{font-size:15px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);font-weight:bold;margin-bottom:18px}.footer p,.footer a{font-size:15px;line-height:1.75;color:white}.footer a{text-decoration:underline}.copyright{text-align:center;margin-top:40px;font-size:13px;color:rgba(255,255,255,.82)}
 @media(max-width:900px){.nav{height:auto}.nav .wrap{padding:14px 0;align-items:flex-start;flex-direction:column}.links{flex-wrap:wrap;gap:16px 22px}.band-inner{grid-template-columns:1fr}.band-inner{padding:28px 0}.gold-btn{justify-self:start}.form-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:28px}.submit{width:100%;padding-left:20px;padding-right:20px}}
 @media(max-width:620px){.wrap{width:min(100% - 30px,1120px)}.hero{min-height:390px}.hero-inner{padding:58px 0 54px}.mini-divider span{width:70px}.teal-band .wrap{width:100%;padding:0 20px}.band-left{gap:16px}.circle-icon{width:58px;height:58px}.circle-icon img{width:32px;height:32px}.band-title{font-size:18px}.band-text{font-size:14px}.gold-btn{width:100%;text-align:center;padding:17px 20px}.form-section{padding:42px 0 50px}.form{margin-top:26px}.field input,.field select,.field textarea{font-size:16px}.footer{text-align:left}.brand{font-size:20px}.links{font-size:12px}}
 </style>
+
+<style>
+  .brand-nav {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 18px clamp(22px, 5vw, 64px);
+    background: #FFFFFF;
+  }
+
+  .brand-nav__identity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  .brand-nav__heart-text {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 38px;
+    line-height: 1;
+    color: #2F7783;
+    display: inline-block;
+    transform: translateY(-1px);
+  }
+
+  .brand-nav__title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(21px, 2.2vw, 28px);
+    line-height: 1.05;
+    font-weight: bold;
+    color: #1F4F57;
+    white-space: nowrap;
+  }
+
+  .brand-nav__links {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(24px, 3.5vw, 48px);
+    min-width: 0;
+  }
+
+  .brand-nav__links a {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(17px, 1.8vw, 21px);
+    line-height: 1.2;
+    font-weight: bold;
+    color: #1F4F57;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .brand-nav__links a:hover,
+  .brand-nav__links a:focus {
+    color: #2F7783;
+  }
+
+  @media screen and (max-width: 760px) {
+    .brand-nav {
+      gap: 14px;
+      padding: 14px 16px;
+    }
+
+    .brand-nav__title {
+      display: none;
+    }
+
+    .brand-nav__heart-text {
+      font-size: 34px;
+    }
+
+    .brand-nav__links {
+      gap: clamp(12px, 4vw, 22px);
+    }
+
+    .brand-nav__links a {
+      font-size: clamp(14px, 4vw, 17px);
+      white-space: normal;
+      text-align: right;
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    .brand-nav {
+      align-items: center;
+      padding: 12px 12px;
+    }
+
+    .brand-nav__heart-text {
+      font-size: 31px;
+    }
+
+    .brand-nav__links {
+      gap: 11px;
+    }
+
+    .brand-nav__links a {
+      font-size: 13px;
+    }
+  }
+</style>
+
 </head>
 <body>
 <div class="page">
-<nav class="nav"><div class="wrap"><a class="brand" href="#top"><span>♡</span>Stronger Together</a><div class="links"><a href="https://youngjessica.github.io/stronger-together-home/">Home</a><a class="active" href="#registration">Registration</a><a href="https://sites.google.com/view/building-a-better-marriage/recent-talks-on-marriage?authuser=0">Recent Talks</a></div></div></nav>
+
+<nav class="brand-nav">
+  <a class="brand-nav__identity" href="https://youngjessica.github.io/stronger-together-home/" aria-label="Stronger Together home">
+    <span class="brand-nav__heart-text" aria-hidden="true">♡</span>
+    <span class="brand-nav__title">Stronger Together</span>
+  </a>
+
+  <div class="brand-nav__links">
+    <a href="https://youngjessica.github.io/stronger-together-home/">Home</a>
+    <a href="index.html">Registration</a>
+  </div>
+</nav>
+
 <header class="hero" id="top"><div class="hero-inner"><h1>Stronger Together</h1><div class="mini-divider"><span></span>♥<span></span></div><div class="sub">Building Better Relationships</div><div class="series">A 4-Part Fireside Series</div></div></header>
 <section class="teal-band"><div class="wrap band-inner"><div class="band-left"><div class="circle-icon"><img src="calendar.png" alt="calendar icon"></div><div><div class="band-title">Register Today</div><div class="band-text">Spots are limited. Reserve your place now!</div></div></div><a class="gold-btn" href="#registration">Register Below</a></div></section>
 <section class="form-section" id="registration"><div class="wrap"><h2>Registration Form</h2><p class="intro">Please fill out the form below to register for the series.</p><div class="mini-divider"><span></span>♥<span></span></div><form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSdwvuJlSXWRsozdVuHzhtHhbgsJZU0-aXh5cPXZCtsqkSsWOQ/viewform" target="_blank"><div class="form-grid"><div class="field"><label>Full Name <span class="req">*</span></label><input type="text" placeholder="Your full name"></div><div class="field"><label>Email Address <span class="req">*</span></label><input type="email" placeholder="Your email address"></div><div class="field"><label>Are you attending as a couple? <span class="req">*</span></label><select><option>Please select...</option><option>Yes</option><option>No</option></select></div><div class="field"><label>How many people will be attending? <span class="req">*</span></label><select><option>Please select...</option><option>1</option><option>2</option><option>3+</option></select></div><div></div><div class="field full"><label>Anything else we should know?</label><textarea placeholder="Special needs, questions, or additional info (optional)"></textarea></div></div><div class="submit-wrap"><button class="submit" type="submit">Submit Registration</button></div></form></div></section>

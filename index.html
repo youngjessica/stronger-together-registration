@@ -187,6 +187,67 @@
 }
 </style>
 
+
+<style>
+  .success-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(31,79,87,.68);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+
+  .success-box {
+    width: min(100%, 520px);
+    background: #F8F4EE;
+    border-radius: 22px;
+    padding: 38px 32px;
+    text-align: center;
+    box-shadow: 0 18px 46px rgba(0,0,0,.22);
+    font-family: Verdana, sans-serif;
+    box-sizing: border-box;
+  }
+
+  .success-box .heart {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 42px;
+    color: #2F7783;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .success-box h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(28px, 6vw, 38px);
+    line-height: 1.15;
+    color: #1F4F57;
+    margin: 0 0 14px;
+  }
+
+  .success-box p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #222222;
+    margin: 0 0 24px;
+  }
+
+  .success-box button {
+    background: #2F7783;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 999px;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+</style>
+
 </head>
 <body>
 <div class="page">
@@ -205,8 +266,31 @@
 
 <header class="hero" id="top"><div class="hero-inner"><h1>Stronger Together</h1><div class="mini-divider"><span></span>♥<span></span></div><div class="sub">Building Better Relationships</div><div class="series">A 4-Part Fireside Series</div></div></header>
 <section class="teal-band"><div class="wrap band-inner"><div class="band-left"><div class="circle-icon"><img src="calendar.png" alt="calendar icon"></div><div><div class="band-title">Register Today</div><div class="band-text">Spots are limited. Reserve your place now!</div></div></div><a class="gold-btn" href="#registration">Register Below</a></div></section>
-<section class="form-section" id="registration"><div class="wrap"><h2>Registration Form</h2><p class="intro">Please fill out the form below to register for the series.</p><div class="mini-divider"><span></span>♥<span></span></div><form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSdwvuJlSXWRsozdVuHzhtHhbgsJZU0-aXh5cPXZCtsqkSsWOQ/viewform" target="_blank"><div class="form-grid"><div class="field"><label>Full Name <span class="req">*</span></label><input type="text" placeholder="Your full name"></div><div class="field"><label>Email Address <span class="req">*</span></label><input type="email" placeholder="Your email address"></div><div class="field"><label>Are you attending as a couple? <span class="req">*</span></label><select><option>Please select...</option><option>Yes</option><option>No</option></select></div><div class="field"><label>How many people will be attending? <span class="req">*</span></label><select><option>Please select...</option><option>1</option><option>2</option><option>3+</option></select></div><div></div><div class="field full"><label>Anything else we should know?</label><textarea placeholder="Special needs, questions, or additional info (optional)"></textarea></div></div><div class="submit-wrap"><button class="submit" type="submit">Submit Registration</button></div></form></div></section>
+<section class="form-section" id="registration"><div class="wrap"><h2>Registration Form</h2><p class="intro">Please fill out the form below to register for the series.</p><div class="mini-divider"><span></span>♥<span></span></div><form id="registrationForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdwvuJlSXWRsozdVuHzhtHhbgsJZU0-aXh5cPXZCtsqkSsWOQ/formResponse" method="POST" target="hidden-registration-frame" onsubmit="handleRegistrationSubmit()"><div class="form-grid"><div class="field"><label>Full Name <span class="req">*</span></label><input type="text" placeholder="Your full name" name="entry.280224028"></div><div class="field"><label>Email Address <span class="req">*</span></label><input type="email" placeholder="Your email address" required></div><div class="field"><label>Are you attending as a couple? <span class="req">*</span></label><select required name="entry.107900508"><option>Please select...</option><option>Yes</option><option>No</option></select></div><div class="field"><label>How many people will be attending? <span class="req">*</span></label><select name="entry.148666135"><option>Please select...</option><option>1</option><option>2</option><option>3+</option></select></div><div></div><div class="field full"><label>Anything else we should know?</label><textarea placeholder="Special needs, questions, or additional info (optional)" name="entry.1532525501"></textarea></div></div><div class="submit-wrap"><button class="submit" type="submit">Submit Registration</button></div></form></div></section>
 <footer class="footer"><div class="wrap footer-grid"><div><div class="logo-heart">♡</div><h3>Stronger Together</h3><p>Building Better Relationships<br>A 4-Part Fireside Series</p></div><div><div class="foot-label">Questions?</div><p>We’d love to help!</p><p>Email: <a href="mailto:stronger.together.series@gmail.com">stronger.together.series@gmail.com</a></p></div><div><div class="foot-label">Location</div><p>The Church of Jesus Christ of Latter-day Saints<br>5750 Shull Rd.<br>Huber Heights, Ohio 45424</p><p><a href="https://www.google.com/maps/dir/?api=1&destination=5750%20Shull%20Rd%20Huber%20Heights%20Ohio%2045424" target="_blank">Get Directions</a></p></div></div><div class="wrap copyright">© 2026 Stronger Together Series. All rights reserved.</div></footer>
 </div>
+
+<iframe name="hidden-registration-frame" style="display:none;"></iframe>
+
+<div id="successOverlay" class="success-overlay">
+  <div class="success-box">
+    <div class="heart">♡</div>
+    <h2>Registration Submitted!</h2>
+    <p>Thank you for registering for Stronger Together. We’re so excited to have you join us.</p>
+    <button type="button" onclick="document.getElementById('successOverlay').style.display='none'">Close</button>
+  </div>
+</div>
+
+<script>
+  function handleRegistrationSubmit() {
+    setTimeout(function() {
+      document.getElementById('successOverlay').style.display = 'flex';
+      var form = document.getElementById('registrationForm');
+      if (form) { form.reset(); }
+    }, 700);
+    return true;
+  }
+</script>
+
 </body>
 </html>

@@ -118,6 +118,75 @@
   }
 </style>
 
+
+<style>
+/* Mobile spacing fix for the Register Today banner */
+@media screen and (max-width: 620px) {
+  .teal-band {
+    padding: 0;
+  }
+
+  .teal-band .wrap {
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  .band-inner {
+    padding: 34px 0 38px !important;
+    gap: 28px !important;
+  }
+
+  .band-left {
+    padding: 0 4px;
+    gap: 18px !important;
+    align-items: center;
+  }
+
+  .band-left > div:last-child {
+    min-width: 0;
+    padding-right: 4px;
+  }
+
+  .band-title {
+    margin-bottom: 6px;
+  }
+
+  .band-text {
+    line-height: 1.55;
+  }
+
+  .gold-btn {
+    display: block;
+    width: calc(100% - 8px) !important;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 19px 24px !important;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .teal-band .wrap {
+    padding: 0 18px;
+  }
+
+  .band-inner {
+    padding: 30px 0 34px !important;
+  }
+
+  .band-left {
+    align-items: flex-start;
+  }
+
+  .gold-btn {
+    width: 100% !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="page">

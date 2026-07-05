@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register | Stronger Together</title>
+  <style>
+    :root{
+      --teal:#2F7783;
+      --dark-teal:#1F4F57;
+      --cream:#F8F4EE;
+      --sage:#EEF3F1;
+      --coral:#D88B83;
+      --divider:#D8D2CB;
+      --text:#222222;
+      --white:#FFFFFF;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Verdana,Arial,sans-serif;color:var(--text);background:#fff;}
+    img{max-width:100%;display:block}
+    a{color:inherit}
+    .site{width:100%;overflow-x:hidden;background:#fff;}
+    .container{width:min(1180px, calc(100% - 44px));margin:0 auto;}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(248,244,238,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(216,210,203,.75);}
+    .nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:22px;}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#111;font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:bold;white-space:nowrap;}
+    .brand-mark{color:var(--teal);font-size:24px;line-height:1}
+    .nav-links{display:flex;align-items:center;gap:24px;font-size:13px;}
+    .nav-links a{text-decoration:none;color:#222;}
+    .btn{display:inline-block;background:var(--teal);color:white;text-decoration:none;padding:15px 34px;border-radius:999px;font-size:14px;font-weight:bold;letter-spacing:1px;box-shadow:0 8px 18px rgba(47,119,131,.22);line-height:1.4;}
+    .btn-light{background:white;color:var(--dark-teal);box-shadow:0 6px 18px rgba(0,0,0,.15)}
+    .hero{position:relative;min-height:590px;color:white;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(31,79,87,.9) 0%,rgba(31,79,87,.72) 44%,rgba(31,79,87,.25) 100%),url('assets/hero.jpg') center/cover no-repeat;}
+    .hero-content{padding:86px 0 90px;max-width:720px;}
+    .eyebrow{font-size:15px;letter-spacing:2px;text-transform:uppercase;font-weight:bold;color:var(--cream);margin-bottom:14px;}
+    h1,h2,h3{font-family:Georgia,'Times New Roman',serif;margin:0;color:inherit;}
+    h1{font-size:clamp(48px,8vw,82px);line-height:.98;font-weight:bold;margin-bottom:18px;text-shadow:0 3px 12px rgba(0,0,0,.25);}
+    .hero-sub{font-family:Georgia,'Times New Roman',serif;font-size:clamp(26px,4vw,42px);font-style:italic;color:var(--cream);line-height:1.18;margin-bottom:24px;}
+    .accent{width:96px;height:4px;background:var(--teal);border-radius:3px;margin:0 0 24px;}
+    .hero p{font-size:clamp(16px,2.6vw,21px);line-height:1.7;max-width:640px;margin:0 0 32px;color:var(--cream);}
+    .section{padding:70px 0;}
+    .quick{margin-top:-54px;position:relative;z-index:5;}
+    .quick-box{background:var(--cream);border-radius:18px;padding:32px 30px;box-shadow:0 12px 30px rgba(0,0,0,.12);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;}
+    .quick-item{display:flex;align-items:flex-start;gap:16px;min-width:0;border-right:1px solid var(--divider);padding-right:18px;}
+    .quick-item:last-child{border-right:0;padding-right:0;}
+    .quick-item img{width:64px;height:64px;flex:0 0 auto;}
+    .label{font-size:13px;font-weight:bold;letter-spacing:1.2px;color:var(--teal);text-transform:uppercase;margin-bottom:8px;}
+    .quick-title{font-weight:bold;color:var(--dark-teal);line-height:1.35;margin-bottom:5px;}
+    .small{font-size:14px;line-height:1.6;color:#222;}
+    .center{text-align:center;}
+    .section-label{font-size:14px;font-weight:bold;letter-spacing:1.7px;color:var(--teal);text-transform:uppercase;margin-bottom:12px;}
+    .section h2{font-size:clamp(34px,5vw,50px);line-height:1.12;color:#111;margin-bottom:16px;}
+    .divider-heart{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px auto 24px;color:var(--coral);font-size:22px;}
+    .divider-heart span{display:block;width:60px;height:1px;background:var(--divider)}
+    .form-wrap{background:linear-gradient(180deg,#fff 0%,#fbf8f4 100%);border-radius:22px;box-shadow:0 12px 32px rgba(0,0,0,.12);border:1px solid rgba(216,210,203,.75);padding:20px;max-width:860px;margin:30px auto 0;}
+    .form-frame{width:100%;height:1120px;border:0;border-radius:16px;background:white;}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;}
+    .gain{background:var(--sage);border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.08);}
+    .gain-content{padding:42px 38px;}
+    .gain h2{color:var(--dark-teal);font-size:clamp(32px,5vw,44px);}
+    .check-list{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:16px;font-size:15px;line-height:1.6;}
+    .check-list li{display:flex;gap:12px;align-items:flex-start;}
+    .check-list li::before{content:'✓';color:var(--teal);font-weight:bold;font-size:18px;line-height:1.3;}
+    .image-card{border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.1);min-height:320px;background:url('assets/hands.jpg') center/cover no-repeat;}
+    .after-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+    .info-card{border-radius:18px;padding:38px 34px;box-shadow:0 8px 24px rgba(0,0,0,.08);background:var(--sage);}
+    .info-card:nth-child(2){background:var(--cream)}
+    .info-card h3{font-size:32px;color:var(--dark-teal);margin-bottom:14px;}
+    .info-card p{font-size:15px;line-height:1.75;margin:0;}
+    .cta{background:linear-gradient(rgba(31,79,87,.94),rgba(31,79,87,.94)),url('assets/hero.jpg') center/cover no-repeat;color:white;text-align:center;padding:76px 0;}
+    .cta h2{color:white;font-size:clamp(34px,6vw,54px);}
+    .cta p{max-width:760px;margin:18px auto 0;color:var(--cream);font-size:17px;line-height:1.8;}
+    .footer{background:var(--dark-teal);color:white;padding:42px 0 28px;}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px;align-items:start;}
+    .footer h3{font-size:24px;margin-bottom:12px;}
+    .footer p,.footer a{font-size:13px;line-height:1.7;color:var(--cream);text-decoration:none;}
+    .footer small{display:block;text-align:center;margin-top:36px;border-top:1px solid rgba(255,255,255,.2);padding-top:22px;color:rgba(255,255,255,.75)}
+    @media (max-width: 950px){
+      .nav-inner{height:auto;padding:16px 0;align-items:flex-start;flex-direction:column;}
+      .nav-links{flex-wrap:wrap;gap:14px 18px;}
+      .quick-box{grid-template-columns:repeat(2,minmax(0,1fr));}
+      .quick-item:nth-child(2){border-right:0;padding-right:0;}
+      .two-col,.after-grid{grid-template-columns:1fr;}
+      .image-card{min-height:260px;}
+      .footer-grid{grid-template-columns:1fr;}
+    }
+    @media (max-width: 620px){
+      .container{width:min(100% - 30px,1180px)}
+      .hero{min-height:520px;background-position:center right;}
+      .hero-content{padding:62px 0 76px;}
+      .quick{margin-top:-34px;}
+      .quick-box{grid-template-columns:1fr;padding:26px 20px;}
+      .quick-item{border-right:0;border-bottom:1px solid var(--divider);padding-right:0;padding-bottom:20px;}
+      .quick-item:last-child{border-bottom:0;padding-bottom:0;}
+      .section{padding:54px 0;}
+      .form-wrap{padding:10px;border-radius:18px;}
+      .form-frame{height:1280px;border-radius:12px;}
+      .gain-content,.info-card{padding:30px 24px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="#top"><span class="brand-mark">♡</span> Stronger Together</a>
+        <div class="nav-links">
+          <a href="#details">Details</a>
+          <a href="#register">Registration</a>
+          <a href="#what-you-gain">What You’ll Gain</a>
+          <a class="btn" href="#register">Register Free</a>
+        </div>
+      </div>
+    </nav>
+
+    <header id="top" class="hero">
+      <div class="container hero-content">
+        <div class="eyebrow">Welcome to</div>
+        <h1>Stronger Together</h1>
+        <div class="accent"></div>
+        <div class="hero-sub">Building Better Relationships</div>
+        <div class="eyebrow">A 4-Part Fireside Series</div>
+        <p>Practical tools and heart-centered conversations to help couples build a stronger, Christ-centered marriage.</p>
+        <a class="btn" href="#register">Register for Free</a>
+      </div>
+    </header>
+
+    <section id="details" class="quick">
+      <div class="container quick-box">
+        <div class="quick-item">
+          <img src="assets/location.png" alt="Location icon">
+          <div><div class="label">Location</div><div class="quick-title">Dayton Area</div><div class="small">5750 Shull Rd.<br>Huber Heights, Ohio 45424</div></div>
+        </div>
+        <div class="quick-item">
+          <img src="assets/calendar.png" alt="Calendar icon">
+          <div><div class="label">Dates</div><div class="quick-title">Sept. 27 – Oct. 18</div><div class="small">Four Saturday evenings</div></div>
+        </div>
+        <div class="quick-item">
+          <img src="assets/dollar.png" alt="Cost icon">
+          <div><div class="label">Cost</div><div class="quick-title">Completely Free</div><div class="small">No cost or obligation.</div></div>
+        </div>
+        <div class="quick-item">
+          <img src="assets/people.png" alt="People icon">
+          <div><div class="label">Designed For</div><div class="quick-title">Couples in Every Stage</div><div class="small">Engaged, newlywed, or married for years.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="register" class="section center">
+      <div class="container">
+        <div class="section-label">Save Your Spot</div>
+        <h2>Register for Free</h2>
+        <div class="divider-heart"><span></span>♡<span></span></div>
+        <p style="max-width:760px;margin:0 auto;font-size:16px;line-height:1.75;">Please complete the form below to reserve your place for the Stronger Together fireside series.</p>
+        <div class="form-wrap">
+          <iframe class="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdwvuJlSXWRsozdVuHzhtHhbgsJZU0-aXh5cPXZCtsqkSsWOQ/viewform?embedded=true">Loading…</iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-you-gain" class="section">
+      <div class="container two-col">
+        <div class="gain">
+          <div class="gain-content">
+            <div class="section-label">What You’ll Gain</div>
+            <h2>Real tools for real relationships.</h2>
+            <ul class="check-list">
+              <li>Practical tools for communication and connection.</li>
+              <li>Christ-centered principles for lasting love.</li>
+              <li>Encouragement for every season of your relationship.</li>
+              <li>A supportive, welcoming environment for couples.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="image-card" aria-label="Couple holding hands"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container after-grid">
+        <div class="info-card">
+          <div class="section-label">After You Register</div>
+          <h3>Watch for details.</h3>
+          <p>You’ll receive confirmation information and any important updates before the first session.</p>
+        </div>
+        <div class="info-card">
+          <div class="section-label">Questions?</div>
+          <h3>We’re happy to help.</h3>
+          <p>If you need help registering or updating your information, please reach out to the event organizer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div style="font-size:28px;color:var(--cream);margin-bottom:10px;">♡</div>
+        <h2>We Can’t Wait to Grow Together With You!</h2>
+        <p>Spots are unlimited, but registering helps us keep you updated with all the details.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div><h3>Stronger Together</h3><p>Practical tools. Meaningful conversations. Stronger relationships.</p></div>
+        <div><div class="label" style="color:white">Quick Links</div><p><a href="#top">Home</a><br><a href="#register">Registration</a><br><a href="https://sites.google.com/view/building-a-better-marriage/recent-talks-on-marriage?authuser=0">Recent Talks</a></p></div>
+        <div><div class="label" style="color:white">Location</div><p>5750 Shull Rd.<br>Huber Heights, Ohio 45424</p></div>
+      </div>
+      <div class="container"><small>© 2026 Stronger Together. All rights reserved.</small></div>
+    </footer>
+  </div>
+</body>
+</html>
